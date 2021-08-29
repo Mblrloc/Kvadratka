@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.20)
+project(Kvadratka CXX C)
+
+set(CMAKE_C_STANDARD 99)
+SET_SOURCE_FILES_PROPERTIES(main.c PROPERTIES LANGUAGE CXX)
+SET_SOURCE_FILES_PROPERTIES(quadric.c PROPERTIES LANGUAGE CXX)
+SET_SOURCE_FILES_PROPERTIES(quadric.h PROPERTIES LANGUAGE CXX)
+SET_SOURCE_FILES_PROPERTIES(testing_system.c PROPERTIES LANGUAGE CXX)
+SET_SOURCE_FILES_PROPERTIES(TXLib.h PROPERTIES LANGUAGE CXX)
+add_executable(Kvadratka main.c quadric.h quadric.c TXLib.h)
+add_executable(test_Kvadratka testing_system.c quadric.h quadric.c TXLib.h)
